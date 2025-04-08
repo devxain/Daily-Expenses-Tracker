@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #10ba90, pink);
+  color: #333;
+}
+.topbar {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+}
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+  color: #10ba90;
+}
+.topbar span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+.form-section,
+.calendar-section {
+  flex: 1 1 300px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+button {
+  background: linear-gradient(to right, #10ba90, pink);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  opacity: 0.9;
+}
+.calendar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+.day-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px;
+  flex: 1 1 13%;
+  margin: 3px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.day-btn.active {
+  background: #10ba90;
+  color: white;
+}
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f8f8f8;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-left: 5px solid #10ba90;
+}
+.total {
+  text-align: right;
+  font-weight: bold;
+  color: #10ba90;
+}
+.section-title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
